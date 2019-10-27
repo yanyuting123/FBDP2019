@@ -28,6 +28,7 @@
 ### 运行说明
 
 * 选择 Selection
+
   以Ra.txt作为输入文件，选择年龄等于18岁的数据（选择年龄小于18岁的仅给出运行截图，在源代码中作为注释）
 
 > hadoop jar Selection.jar <input path\> <output path\> 
