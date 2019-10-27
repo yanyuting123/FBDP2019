@@ -27,17 +27,17 @@
 
 ### 运行说明
 
-* Selection
+* 选择Selection
   以Ra.txt作为输入文件，选择年龄等于18岁的数据（选择年龄小于18岁的仅给出运行截图，在源代码中作为注释）
 
 > hadoop jar Selection.jar <input path\> <output path\> 
 
-* Projection
+* 投影Projection
   以Ra.txt作为输入文件，做name的投影
 
 > hadoop jar Projection.jar <input path\> <output path\> 
 
-* UnionSet
+* 并UnionSet
 
   以Ra1.txt，Ra2.txt作为输入文件，求并集
 
@@ -45,21 +45,21 @@
 
 > hadoop jar UnionSet.jar <input path1\> <input path2\> <output path\> 
 
-* Intersection
+* 交Intersection
   以Ra1.txt，Ra2.txt作为输入文件，求交集
 
   <input path1\>, <input path2\>为两个文件的路径
 
 > hadoop jar Intersection.jar <input path1\> <input path2\> <output path\> 
 
-* Difference
+* 差Difference
   以Ra1.txt和Ra2.txt为输入文件，求Ra2-Ra1的差集
 
   <input path1\>, <input path2\>为两个文件的路径
 
 > hadoop jar Difference.jar <input path1\> <input path2\> <output path\>
 
-* NaturalJoin
+* 自然连接NaturalJoin
   以Ra.txt和Rb.txt为输入文件，Ra和Rb在属性id上进行自然连接，并使输出顺序为(id, name, age, gender, weight, height)
   打包后运行：
 
