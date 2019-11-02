@@ -49,7 +49,7 @@ public class DifferenceSet {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "intersection");
-        job.setJarByClass(NaturalJoin.class);
+        job.setJarByClass(DifferenceSet.class);
         job.setMapperClass(DifferenceSetMapper.class);
         job.setReducerClass(DifferenceSetReducer.class);
         job.setMapOutputKeyClass(RelationA.class);
