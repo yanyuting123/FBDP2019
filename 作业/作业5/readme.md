@@ -15,7 +15,7 @@ result目录为运行结果和可视化图片。
 * outputpath：cluster中间结果和最终分类结果的目录(dirpath)
 * iteration times：迭代次数(int)
 
-> $ bin/hadoop jar KMeansResult.jar <num of k> <inputpath> <outputpath> <iteration times>
+> $ bin/hadoop jar KMeansResult.jar \<num of k> \<inputpath> \<outputpath> \<iteration times>
 >
 > 例：
 >
@@ -27,7 +27,7 @@ result目录为运行结果和可视化图片。
 
 运行聚类数据可视化.py
 
-输入result文件路径，即可在python文件路径下获取可视化结果图片（最多支持分10类）。
+输入分类结果文件路径，即可在python文件路径下获取可视化结果图片（最多支持分10类）。
 
 ## 聚类结果
 
