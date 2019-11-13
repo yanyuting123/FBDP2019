@@ -66,14 +66,16 @@ public class KMeans {
         public void reduce(IntWritable key, Iterable<Cluster> value, Context context)
                 throws IOException, InterruptedException{
             long total_num = 0;
+            long num = 0;
             Instance ins = new Instance();
             for(Cluster cluster:value){
+                num = cluster.getNumOfPoints();
                 /*第一次循环*/
                 if(total_num == 0){
-                    ins = cluster.getCenter();
+                    ins = cluster.getCenter().multiply(num);
                 }
                 else{
-                    ins = ins.add(cluster.getCenter());
+                    ins = ins.add(cluster.getCenter().multiply(num));
                 }
                 total_num += cluster.getNumOfPoints();
             }
@@ -137,6 +139,7 @@ public class KMeans {
             job.setJarByClass(KMeans.class);
             job.setMapperClass(KMeansMapper.class);
             job.setReducerClass(KMeansReducer.class);
+            job.setCombinerClass(KMeansReducer.class);
             job.setMapOutputKeyClass(IntWritable.class);
             job.setMapOutputValueClass(Cluster.class);
             job.setOutputKeyClass(IntWritable.class);

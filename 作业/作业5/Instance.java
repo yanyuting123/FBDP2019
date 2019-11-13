@@ -51,7 +51,13 @@ public class Instance implements Writable{
         }
         return result;
     }
-
+    public Instance multiply(long n){
+        Instance result = new Instance(this);
+        for(int i = 0; i < value.size(); i++){
+            result.value.set(i, value.get(i)*n);
+        }
+        return result;
+    }
     public Instance divide(long n){
         Instance result = new Instance(this);
         for(int i = 0; i < value.size(); i++){
