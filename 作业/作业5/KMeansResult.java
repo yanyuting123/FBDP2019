@@ -62,13 +62,13 @@ public class KMeansResult {
     public static void main(String[] args) throws Exception {
         //0:k 1:inputPath 2:outputPath(cluster path) 3:iteration times
         Kmeansmain(args);
-
+        int iter_times = Integer.parseInt(args[3]);
         int k = Integer.parseInt(args[0]);
         String inputPath = args[1];
         String clusterPath = args[2];
         Configuration conf = new Configuration();
         conf.setInt("k",k);
-        conf.set("clusterPath",clusterPath + "cluster" + Integer.toString(k) + "/" + "part-r-00000");
+        conf.set("clusterPath",clusterPath + "cluster" + iter_times + "/" + "part-r-00000");
         Job job = Job.getInstance(conf, "KMeansResult");
         job.setJarByClass(KMeansResult.class);
         job.setMapperClass(KMeansResultMapper.class);
