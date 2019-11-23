@@ -100,7 +100,7 @@ jdk1.8
 
 #### 运行截图
 
-![add image](https://github.com/yanyuting123/FBDP2019/edit/master/%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A6/1.png)
+![](https://i.loli.net/2019/11/19/8I1B4xVrYeApsG2.png)
 
 ## 伪分布模式
 
