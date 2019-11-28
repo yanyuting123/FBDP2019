@@ -40,8 +40,8 @@ public class ProductPurchaseCount {
             for (IntWritable val : value) {
                 sum_count += val.get();
             }
-            reduce_key = new Area_Number(key.getArea(), sum_count);
-            reduce_value = new IntWritable(key.getProduct_id());
+            reduce_key = new Area_Number(key.getArea(), key.getProduct_id());
+            reduce_value = new IntWritable(sum_count);
             context.write(reduce_key, reduce_value);
         }
     }
