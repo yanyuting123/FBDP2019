@@ -33,9 +33,11 @@
 
 ![](https://i.loli.net/2019/11/28/K1PCWwjmF74IEVx.png)
 
+
 各省商品购买量前十：
 
 ![](https://i.loli.net/2019/11/28/r4UCqxRh7EsKHJM.png)
+
 
 ## part 2
 
