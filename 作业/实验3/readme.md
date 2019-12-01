@@ -56,6 +56,8 @@ row format delimited fields terminated by ',';
 > select count(*) from doubleeleven where action=2 and gender=1;
 //查询双11那天浏览次数前十的品牌:
 > from(select brand_id, count(*) as brand_count from doubleeleven group by brand_id) e select * order by e.brand_count desc limit 10;
+//------------------------------------------------------------------------
+//验证下part1中上海市购买数前十的结果
 from (select item_id, count(*) as countnum from doubleeleven where province='上海市' and action=2 group by item_id) e select * order by e.countnum desc limit 10;
 ```
 
@@ -77,7 +79,7 @@ from (select item_id, count(*) as countnum from doubleeleven where province='上
 
 ![](https://i.loli.net/2019/11/27/fxbp5LzJ6jKCEya.png)
 
-	### 一些操作记录
+##### 一些操作记录
 
 ```
 //创建外部表,注意这里的location是hdfs上的，或者先建表再导入数据也可以
@@ -86,7 +88,7 @@ row format delimited fields terminated by ','
 location '/user/Documents/HiveData/million_user_log.csv';
 ```
 
-#### 关于动态分区
+##### 关于动态分区
 
 ```
 //创建外部表并动态分区，似乎动态分区只能从原有的表中通过select创建
@@ -142,3 +144,4 @@ bin/schematool -initSchema -dbType derby
 ```
 
 对derby重新进行初始化
+
